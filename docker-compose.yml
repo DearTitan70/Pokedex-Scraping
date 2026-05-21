@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  pokedex-scraper:
+    build: .
+    container_name: pokedex-scraper
+    env_file:
+      - .env
+    volumes:
+      - ./credentials.json:/usr/src/app/credentials.json
+    restart: "no"
